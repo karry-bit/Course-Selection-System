@@ -1,0 +1,24 @@
+# Build
+target/
+backend/target/
+dist/
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Compiled
+*.class
+*.jar
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.jks
+*.keystore
+*.p12

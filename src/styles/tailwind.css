@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom shadcn-like utility placeholders */
+.card { @apply bg-white rounded-md shadow-sm p-4; }
+.card-rail { @apply bg-gray-50 rounded-md p-3; }
+.badge { @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800; }
+.btn { @apply inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-white text-sm hover:opacity-95; }
