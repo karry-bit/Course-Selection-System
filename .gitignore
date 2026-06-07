@@ -1,24 +1,18 @@
-# Build
-target/
-backend/target/
-dist/
 node_modules/
-
-# IDE
+target/
+/backend/target/
+/backend/bin/target/
 .idea/
 .vscode/
-*.iml
-
-# Compiled
+.DS_Store
+.env
+.mvn/
+dist/
+build/
+/.idea
+.classpath
+.project
+*.log
 *.class
 *.jar
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Secrets
-.env
-*.jks
-*.keystore
-*.p12
+/*.iml
