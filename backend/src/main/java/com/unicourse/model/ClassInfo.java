@@ -1,0 +1,34 @@
+package com.unicourse.model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "class_info")
+public class ClassInfo {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private String grade;
+    private String major;
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public String getGrade() { return grade; }
+    public void setGrade(String grade) { this.grade = grade; }
+    public String getMajor() { return major; }
+    public void setMajor(String major) { this.major = major; }
+    
+    // 兼容前端 department 字段
+    @JsonProperty("department")
+    public String getDepartment() {
+        return major;
+    }
+    
+    public void setDepartment(String department) {
+        this.major = department;
+    }
+}

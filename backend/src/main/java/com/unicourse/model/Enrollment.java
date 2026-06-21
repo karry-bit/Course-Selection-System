@@ -7,20 +7,17 @@ import java.time.LocalDateTime;
 public class Enrollment {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @ManyToOne(optional = false)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "student_id", nullable = false)
     private Student student;
-
-    @ManyToOne(optional = false)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "course_id", nullable = false)
     private Course course;
-
-    private String status; // SELECTED / DROPPED
-
+    private String status;
     private Double score;
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
-    private LocalDateTime createdAt = LocalDateTime.now();
-
-    // getters/setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public Student getStudent() { return student; }
